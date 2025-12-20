@@ -60,11 +60,16 @@ const SKILLS = [
 const root = document.documentElement;
 const themeBtn = document.getElementById("themeBtn");
 
-// Always start in dark
-root.setAttribute("data-theme", "dark");
-themeBtn.textContent = "🌙";
+function forceDark() {
+  root.setAttribute("data-theme", "dark");
+  if (themeBtn) themeBtn.textContent = "🌙";
+  localStorage.removeItem("theme");
+}
 
-localStorage.removeItem("theme");
+forceDark();
+window.addEventListener("pageshow", () => {
+  forceDark();
+});
 
 // Toggle 
 themeBtn.addEventListener("click", () => {
@@ -165,4 +170,5 @@ function renderProjects() {
 
 renderFilters();
 renderProjects();
+
 
