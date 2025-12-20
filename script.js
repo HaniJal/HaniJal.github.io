@@ -60,14 +60,16 @@ const SKILLS = [
 const root = document.documentElement;
 const themeBtn = document.getElementById("themeBtn");
 
-const savedTheme = localStorage.getItem("theme");
-root.setAttribute("data-theme", savedTheme === "light" ? "light" : "dark");
-themeBtn.textContent = root.getAttribute("data-theme") === "light" ? "☀️" : "🌙";
+// Always start in dark
+root.setAttribute("data-theme", "dark");
+themeBtn.textContent = "🌙";
 
+localStorage.removeItem("theme");
+
+// Toggle 
 themeBtn.addEventListener("click", () => {
-  const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+  const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
   root.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
   themeBtn.textContent = next === "light" ? "☀️" : "🌙";
 });
 
@@ -163,3 +165,4 @@ function renderProjects() {
 
 renderFilters();
 renderProjects();
+
