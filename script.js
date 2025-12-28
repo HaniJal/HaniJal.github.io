@@ -5,7 +5,9 @@ const PROJECTS = [
     desc: "Arcade game with movement, collision logic, and game state management.",
     tags: ["JavaScript", "HTML", "CSS", "SVG"],
     code: "https://github.com/HaniJal/Space-Invaders",
-    image: "assets/invaders.png"
+    demo: "https://hanijal.github.io/Space-Invaders/",   
+    image: "assets/invaders.png",
+    titleLink: true
   },
   {
     id: "weather",
@@ -172,6 +174,7 @@ function renderProjects() {
 
 renderFilters();
 renderProjects();
+
 
 
 
