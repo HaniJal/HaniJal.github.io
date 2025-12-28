@@ -148,7 +148,9 @@ function projectCard(p) {
       <div class="thumb">${img}</div>
 
       <div class="pTopRow">
-        <div class="pTitle">${p.title}</div>
+        <a class="pTitle" href="${p.code}" target="_blank" rel="noreferrer">
+          ${p.title}
+        </a>
 
         <a class="githubIconLink" href="${p.code}" target="_blank" rel="noreferrer"
            aria-label="Open GitHub repository for ${p.title}">
@@ -170,5 +172,6 @@ function renderProjects() {
 
 renderFilters();
 renderProjects();
+
 
 
