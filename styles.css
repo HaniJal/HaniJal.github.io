@@ -331,12 +331,22 @@ h1{
   display: inline-block;
   font-weight: 700;
 }
-.project .pTopRow .pTitle:hover,
-.project .pTopRow .pTitle:focus-visible{
-  text-decoration-line: underline !important;
+
+/* Only titles with titleLink=true get hover underline */
+.pTitleLink{
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.pTitleLink:hover,
+.pTitleLink:focus-visible{
+  text-decoration-line: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 6px;
 }
+
 .pDesc{ margin: 0 0 10px; color: var(--muted); line-height:1.6; }
 
 .tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
@@ -461,5 +471,6 @@ h1{
   .navLink{ padding:8px 10px; font-size:13px; }
   .themeBtn{ width:40px; height:40px; border-radius:14px; }
 }
+
 
 
