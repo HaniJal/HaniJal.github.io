@@ -145,14 +145,19 @@ function projectCard(p) {
     ? `<img src="${p.image}" alt="${p.title} preview" loading="lazy" onerror="this.remove();">`
     : "";
 
+  const titleClass = "pTitle" + (p.titleLink ? " pTitleLink" : "");
+  const titleHref = p.demo || p.code; // demo website if exists, otherwise GitHub
+
+  const titleHTML = p.titleLink
+    ? `<a class="${titleClass}" href="${titleHref}" target="_blank" rel="noreferrer">${p.title}</a>`
+    : `<div class="pTitle">${p.title}</div>`;
+
   return `
     <article class="project" id="proj-${p.id}">
       <div class="thumb">${img}</div>
 
       <div class="pTopRow">
-        <a class="pTitle" href="${p.code}" target="_blank" rel="noreferrer">
-          ${p.title}
-        </a>
+        ${titleHTML}
 
         <a class="githubIconLink" href="${p.code}" target="_blank" rel="noreferrer"
            aria-label="Open GitHub repository for ${p.title}">
@@ -167,6 +172,7 @@ function projectCard(p) {
 }
 
 
+
 function renderProjects() {
   const list = active === "All" ? PROJECTS : PROJECTS.filter(p => p.tags.includes(active));
   gridEl.innerHTML = list.map(projectCard).join("");
@@ -174,6 +180,7 @@ function renderProjects() {
 
 renderFilters();
 renderProjects();
+
 
 
 
