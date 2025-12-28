@@ -326,9 +326,13 @@ h1{
   gap:12px;
 }
 .pTitle{
-  margin:0;
-  font-size:18px;
-  font-weight:950;
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 700;
+}
+.pTitle:hover{
+  text-decoration: underline;
 }
 .pDesc{ margin: 0 0 10px; color: var(--muted); line-height:1.6; }
 
@@ -454,3 +458,4 @@ h1{
   .navLink{ padding:8px 10px; font-size:13px; }
   .themeBtn{ width:40px; height:40px; border-radius:14px; }
 }
+
