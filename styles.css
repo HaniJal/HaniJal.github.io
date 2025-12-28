@@ -344,7 +344,7 @@ h1{
 
 .pTitleLink:hover,
 .pTitleLink:focus-visible{
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 4px;
 }
 
 .pDesc{ margin: 0 0 10px; color: var(--muted); line-height:1.6; }
@@ -471,6 +471,7 @@ h1{
   .navLink{ padding:8px 10px; font-size:13px; }
   .themeBtn{ width:40px; height:40px; border-radius:14px; }
 }
+
 
 
 
