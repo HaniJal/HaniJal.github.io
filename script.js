@@ -10,6 +10,14 @@ const PROJECTS = [
     titleLink: true
   },
   {
+    id: "ml",
+    title: "ML App",
+    desc: "Weather lookup UI with API integration, input validation, and responsive layout.",
+    tags: ["Python", "ML"],
+    code: "https://github.com/HaniJal/MLApp",
+    image: "assets/ml.png"
+  },
+  {
     id: "weather",
     title: "Weather App",
     desc: "Weather lookup UI with API integration, input validation, and responsive layout.",
@@ -53,9 +61,9 @@ const PROJECTS = [
 
 
 const SKILLS = [
-  "Java", "JavaScript", "C#", "SQL", "PHP",
+  "Python", "Java", "JavaScript", "C#", "SQL", "PHP",
   "HTML", "CSS", "Bootstrap", "SVG",
-  "Git/GitHub", "OOP"
+  "Git/GitHub", "OOP", "ML"
 ];
 
 // ===== THEME =====
@@ -180,6 +188,7 @@ function renderProjects() {
 
 renderFilters();
 renderProjects();
+
 
 
 
