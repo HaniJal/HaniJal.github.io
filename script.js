@@ -12,7 +12,7 @@ const PROJECTS = [
   {
     id: "ml",
     title: "ML App",
-    desc: "Weather lookup UI with API integration, input validation, and responsive layout.",
+    desc: "Python CLI machine-learning app that trains, evaluates, saves (pickle), and reloads regression (house price prediction) and classification (phishing detection) models for user-input predictions.",
     tags: ["Python", "ML"],
     code: "https://github.com/HaniJal/MLApp",
     image: "assets/ml.png"
@@ -188,6 +188,7 @@ function renderProjects() {
 
 renderFilters();
 renderProjects();
+
 
 
 
